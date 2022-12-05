@@ -103,3 +103,8 @@ exports.photo = (req, res, next) => {
  }
  next();
 }
+
+exports.read = (req, res) => {
+    req.game.photo = undefined;
+    return res.json(req.game);
+}
